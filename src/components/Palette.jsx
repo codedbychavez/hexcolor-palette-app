@@ -3,15 +3,19 @@ import HexCard from "./HexCard";
 export default function Palette(props) {
   return (
     <div>
-      <h1>Trending Hex Colors</h1>
+      <h2>Trending Hex Colors</h2>
       <div className="palette">
-        <For each={props.hexColors}>
-          {(hexColor) => {
-            return (
-              <HexCard color={hexColor} />
-            )
-          }}
-        </For>
+        <div className="paletteGridWrapper">
+          <div className="paletteGrid">
+            <For each={props.hexColors}>
+              {(hexColor) => {
+                return (
+                  <HexCard color={hexColor} />
+                )
+              }}
+            </For>
+          </div>
+        </div>
       </div>
     </div>
   )
